@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/syonip/cordova-svelte.git"
+    "url": "git+https://github.com/syonip/svelte-cordova"
   },
   "author": "syonip",
   "license": "ISC"
