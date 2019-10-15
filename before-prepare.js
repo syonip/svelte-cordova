@@ -9,7 +9,6 @@ if (!process.env.CORDOVA_PLATFORM) {
 const fs = require('fs-extra')
 const production = process.env.CORDOVA_PROD;
 let networkInterfaces = os.networkInterfaces()
-console.log(networkInterfaces)
 
 function info(msg) {
   console.log(msg)
