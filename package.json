@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "description": "A package for developing svelte app with cordova, including hot reload dev server.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require @babel/register tests/*.spec.js"
   },
   "keywords": [
     "svelte",
@@ -14,5 +14,12 @@
     "url": "git+https://github.com/syonip/svelte-cordova"
   },
   "author": "syonip",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.1"
+  }
 }
