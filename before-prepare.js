@@ -87,7 +87,7 @@ function copyPublicFiles() {
 }
 
 const publicFolder = '../public'
-const ip = ipLogic.getIP(networkInterfaces);
+const ip = process.env.SERVER_IP ? process.env.SERVER_IP : ipLogic.getIP(networkInterfaces)
 const url = production ? 'index.html' : `http://${ip}:5000`
 let svelteFiles = [
   'index.html',
