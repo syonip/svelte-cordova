@@ -1,6 +1,6 @@
 {
   "name": "svelte-cordova",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A package for developing svelte app with cordova, including hot reload dev server.",
   "scripts": {
     "test": "mocha --require @babel/register tests/*.spec.js"
