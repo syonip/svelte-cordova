@@ -1,13 +1,17 @@
 const os = require('os');
 const ipLogic = require('./services/ip-logic.js')
 
+const production = process.env.CORDOVA_PROD;
 if (!process.env.CORDOVA_PLATFORM) {
   console.log('process.env.CORDOVA_PLATFORM not defined. Not running before-prepare.js hook.')
   return;
 }
+if (production) {
+  console.log('process.env.CORDOVA_PROD defined. Not running before-prepare.js hook.')
+  return;
+}
 
 const fs = require('fs-extra')
-const production = process.env.CORDOVA_PROD;
 let networkInterfaces = os.networkInterfaces()
 
 function info(msg) {
@@ -104,7 +108,7 @@ function runHook(ctx) {
     return
   }
 
-  if (!production) updateConfigUrl(cordovaConfigPath, url)
+  updateConfigUrl(cordovaConfigPath, url)
 
   clearWWW()
   copyPublicFiles()
