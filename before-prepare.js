@@ -104,7 +104,7 @@ function runHook(ctx) {
     return
   }
 
-  updateConfigUrl(cordovaConfigPath, url)
+  if (!production) updateConfigUrl(cordovaConfigPath, url)
 
   clearWWW()
   copyPublicFiles()
